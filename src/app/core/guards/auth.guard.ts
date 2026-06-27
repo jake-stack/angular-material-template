@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
-import * as moment from 'moment';
+import moment from 'moment';
 
 import { AuthenticationService } from '../services/auth.service';
 import { NotificationService } from '../services/notification.service';

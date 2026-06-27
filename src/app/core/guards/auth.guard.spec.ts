@@ -1,5 +1,5 @@
 import { AuthGuard } from './auth.guard';
-import * as moment from 'moment';
+import moment from 'moment';
 
 describe('AuthGuard', () => {
 
