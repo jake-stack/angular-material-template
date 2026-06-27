@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { FlexLayoutModule } from '@angular/flex-layout';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { CustomMaterialModule } from '../custom-material/custom-material.module';
@@ -17,7 +16,6 @@ import { LayoutComponent } from './layout/layout.component';
         CustomMaterialModule,
         FormsModule,
         ReactiveFormsModule,
-        FlexLayoutModule,
     ],
     declarations: [
         ConfirmDialogComponent,
@@ -30,7 +28,6 @@ import { LayoutComponent } from './layout/layout.component';
     exports: [
         FormsModule,
         ReactiveFormsModule,
-        FlexLayoutModule,
         CustomMaterialModule,
         LimitToPipe,
         ConfirmDialogComponent,

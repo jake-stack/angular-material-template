@@ -1,20 +1,20 @@
-<div class="container" fxLayout="row" fxLayoutAlign="center none">
+<div class="container fx-row fx-justify-center">
 
-  <div fxFlex="95%">
+  <div class="fx-95">
 
-    <mat-card>
+    <mat-card appearance="outlined">
       <mat-card-content>
         <h2>My Profile</h2>
 
-        <div fxLayout="row" fxLayout.sm="column" fxLayout.xs="column">
+        <div class="fx-row-stack-sm">
 
-          <div fxFlex="30%" fxFlex.sm="95%" fxFlex.xs="95%">
+          <div class="fx-30-stack">
             <app-profile-details></app-profile-details>
           </div>
 
-          <div fxFlex></div>
+          <div class="fx-spacer"></div>
 
-          <div fxFlex="65%" fxFlex.sm="95%" fxFlex.xs="950%">
+          <div class="fx-65-stack">
 
 
             <mat-tab-group>

@@ -1,16 +1,20 @@
+import { Router } from '@angular/router';
+import moment from 'moment';
+
 import { AuthGuard } from './auth.guard';
-import * as moment from 'moment';
+import { AuthenticationService } from '../services/auth.service';
+import { NotificationService } from '../services/notification.service';
 
 describe('AuthGuard', () => {
 
-    let router;
-    let authService;
-    let notificationService;
+    let router: jasmine.SpyObj<Router>;
+    let authService: jasmine.SpyObj<AuthenticationService>;
+    let notificationService: jasmine.SpyObj<NotificationService>;
 
     beforeEach(() => {
-        router = jasmine.createSpyObj(['navigate']);
-        authService = jasmine.createSpyObj(['getCurrentUser']);
-        notificationService = jasmine.createSpyObj(['openSnackBar']);
+        router = jasmine.createSpyObj<Router>('Router', ['navigate']);
+        authService = jasmine.createSpyObj<AuthenticationService>('AuthenticationService', ['getCurrentUser']);
+        notificationService = jasmine.createSpyObj<NotificationService>('NotificationService', ['openSnackBar']);
     });
 
     it('create an instance', () => {
