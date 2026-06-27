@@ -146,3 +146,126 @@ p .mat-icon {
     opacity: 1;
   }
 }
+
+/* ============================================================
+   Flex utilities (replacement for the removed @angular/flex-layout)
+   Breakpoints mirror flex-layout defaults:
+   xs: <600px, sm: 600-959.98px, md: 960-1279.98px
+   ============================================================ */
+.fx-row {
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+}
+
+.fx-justify-center {
+  justify-content: center;
+}
+
+.fx-align-center {
+  align-items: center;
+}
+
+.fx-spacer {
+  flex: 1 1 0%;
+  box-sizing: border-box;
+}
+
+.fx-95 {
+  flex: 1 1 95%;
+  max-width: 95%;
+  box-sizing: border-box;
+}
+
+.fx-50 {
+  flex: 1 1 50%;
+  max-width: 50%;
+  box-sizing: border-box;
+}
+
+/* Auth/forms: 30% default, 50% on sm, 90% on xs */
+.fx-form-30 {
+  flex: 1 1 30%;
+  max-width: 30%;
+  box-sizing: border-box;
+}
+
+@media (min-width: 600px) and (max-width: 959.98px) {
+  .fx-form-30 {
+    flex-basis: 50%;
+    max-width: 50%;
+  }
+}
+
+@media (max-width: 599.98px) {
+  .fx-form-30 {
+    flex-basis: 90%;
+    max-width: 90%;
+  }
+}
+
+/* change-password field: 40% default, 60% md, 50% sm, 100% xs */
+.fx-cp {
+  flex: 1 1 40%;
+  max-width: 40%;
+  box-sizing: border-box;
+}
+
+@media (min-width: 960px) and (max-width: 1279.98px) {
+  .fx-cp {
+    flex-basis: 60%;
+    max-width: 60%;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 959.98px) {
+  .fx-cp {
+    flex-basis: 50%;
+    max-width: 50%;
+  }
+}
+
+@media (max-width: 599.98px) {
+  .fx-cp {
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+}
+
+/* account page: row that stacks to column below md */
+.fx-row-stack-sm {
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+}
+
+.fx-30-stack {
+  flex: 1 1 30%;
+  max-width: 30%;
+  box-sizing: border-box;
+}
+
+.fx-65-stack {
+  flex: 1 1 65%;
+  max-width: 65%;
+  box-sizing: border-box;
+}
+
+@media (max-width: 959.98px) {
+  .fx-row-stack-sm {
+    flex-direction: column;
+  }
+
+  .fx-30-stack,
+  .fx-65-stack {
+    flex-basis: 95%;
+    max-width: 95%;
+  }
+}
+
+/* layout toolbar label: visible by default, hidden on xs */
+@media (max-width: 599.98px) {
+  .fx-hide-xs {
+    display: none;
+  }
+}
