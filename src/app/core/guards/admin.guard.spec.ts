@@ -1,13 +1,16 @@
+import { Router } from '@angular/router';
+
 import { AdminGuard } from './admin.guard';
+import { AuthenticationService } from '../services/auth.service';
 
 describe('AdminGuard', () => {
 
-    let router;
-    let authService;
+    let router: jasmine.SpyObj<Router>;
+    let authService: jasmine.SpyObj<AuthenticationService>;
 
     beforeEach(() => {
-        router = jasmine.createSpyObj(['navigate']);
-        authService = jasmine.createSpyObj(['getCurrentUser']);
+        router = jasmine.createSpyObj<Router>('Router', ['navigate']);
+        authService = jasmine.createSpyObj<AuthenticationService>('AuthenticationService', ['getCurrentUser']);
     });
 
     it('create an instance', () => {

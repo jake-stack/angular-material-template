@@ -6,7 +6,7 @@ import moment from 'moment';
 })
 export class LocalDatePipe implements PipeTransform {
 
-  transform(value: Date, args: string): string {
+  transform(value: Date | null | undefined, args: string | null): string {
     if (!value || !args) {
       return '';
     }

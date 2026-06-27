@@ -5,7 +5,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class LimitToPipe implements PipeTransform {
 
-  transform(value: string, limitTo: string): string {
+  transform(value: string | null | undefined, limitTo: string): string {
 
     if (value === undefined || value === null) {
       return '';
